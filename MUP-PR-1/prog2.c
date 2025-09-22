@@ -3,30 +3,27 @@
 int main()
 {
     int eId,basicsalary;
-    float HRA, MA, DA, TA, PF, PT, gross, netsalary;
+    float HRA, DA, TA, gross;
     char name[20];
 
-    printf("Enter the eId:");
-    scanf("%d",&eId);
+    printf("Enter the Employee Id: ");
+    scanf("%d", &eId);
 
-    printf("Enter the Employee Name:");
-    scanf("%s",&name);
+    printf("Enter the Employee Name: ");
+    scanf("%s", &name);
 
-    printf("Enter the Employee Basic Salary :");
-    scanf("%d",&basicsalary);
+    printf("Enter the Employee Basic Salary: ");
+    scanf("%d", &basicsalary);
 
-    HRA = basicsalary * 0.3;
-    MA = basicsalary * 0.05;
-    DA = basicsalary * 0.1;
-    TA = basicsalary * 0.07;
-    PF = basicsalary * 0.12;
-    PT = basicsalary * 0.05;
+    HRA = basicsalary * 0.10;
+    DA = basicsalary * 0.05;
+    TA = basicsalary * 0.08;
 
-    gross = basicsalary + HRA + MA + DA + TA;
-    netsalary = gross - PF - PT;
+    gross = basicsalary + HRA + DA + TA;
 
-    printf("\n Gross of Employee:%.2f",gross);
-    printf("\n Net Salary :%.2f",netsalary);
+    printf("\n Name: ", name);
+    printf("\n Id: ", eId);
+    printf("\n Gross Salary: %.2f", gross);
 
-    return 0;
+    return 0;
 }
